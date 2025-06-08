@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -ex
+
+if [ ! -e "${BUILDROOT}/etc/apt/sources.list.d/${RELEASE}.sources" ]; then
+	echo 'bug: missing apt sources file'
+	exit 1
+fi
